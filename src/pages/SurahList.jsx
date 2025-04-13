@@ -9,7 +9,7 @@ const SurahList = () => {
   useEffect(() => {
     const fetchSurahs = async () => {
       try {
-        const response = await fetch('http://api.alquran.cloud/v1/juz/30/quran-uthmani');
+        const response = await fetch('https://api.alquran.cloud/v1/juz/30/quran-uthmani');
         const data = await response.json();
 
         const surahNames = data.data.ayahs.map((ayah) => {

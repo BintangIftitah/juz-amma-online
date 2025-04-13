@@ -15,10 +15,10 @@ function SurahDetail() {
   useEffect(() => {
     const fetchSurahDetail = async () => {
       try {
-        const arabicResponse = await fetch(`http://api.alquran.cloud/v1/surah/${id}/quran-uthmani`);
+        const arabicResponse = await fetch(`https://api.alquran.cloud/v1/surah/${id}/quran-uthmani`);
         const arabicJson = await arabicResponse.json();
 
-        const translationResponse = await fetch(`http://api.alquran.cloud/v1/surah/${id}/id.indonesian`);
+        const translationResponse = await fetch(`https://api.alquran.cloud/v1/surah/${id}/id.indonesian`);
         const translationJson = await translationResponse.json();
 
         if (arabicResponse.ok && translationResponse.ok) {
